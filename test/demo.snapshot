@@ -32,6 +32,89 @@
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
+          "identifier" : "ebc9cfd6-e06f-3e04-91d8-86a1c941dfb0",
+          "instanceIdentifier" : "3211daf1-019b-1000-66b4-5dddcbf7778e",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributesToJSON",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 586.0,
+            "y" : 64.0
+          },
+          "properties" : {
+            "Destination" : "flowfile-attribute",
+            "Null Value" : "false",
+            "Pretty Print" : "false",
+            "Include Core Attributes" : "true",
+            "JSON Handling Strategy" : "ESCAPED"
+          },
+          "propertyDescriptors" : {
+            "attributes-to-json-regex" : {
+              "displayName" : "Attributes Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-to-json-regex",
+              "sensitive" : false
+            },
+            "Destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "Destination",
+              "sensitive" : false
+            },
+            "Null Value" : {
+              "displayName" : "Null Value",
+              "identifiesControllerService" : false,
+              "name" : "Null Value",
+              "sensitive" : false
+            },
+            "Attributes List" : {
+              "displayName" : "Attributes List",
+              "identifiesControllerService" : false,
+              "name" : "Attributes List",
+              "sensitive" : false
+            },
+            "Pretty Print" : {
+              "displayName" : "Pretty Print",
+              "identifiesControllerService" : false,
+              "name" : "Pretty Print",
+              "sensitive" : false
+            },
+            "Include Core Attributes" : {
+              "displayName" : "Include Core Attributes",
+              "identifiesControllerService" : false,
+              "name" : "Include Core Attributes",
+              "sensitive" : false
+            },
+            "JSON Handling Strategy" : {
+              "displayName" : "JSON Handling Strategy",
+              "identifiesControllerService" : false,
+              "name" : "JSON Handling Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-cybersecurity-nar",
             "group" : "org.apache.nifi",
             "version" : "1.25.0"

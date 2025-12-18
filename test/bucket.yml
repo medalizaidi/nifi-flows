@@ -1,5 +1,5 @@
 flows:
-  7ad9e3c3-f169-46c2-8955-6253f8637c0e: {ver: 6, file: demo.snapshot, comments: change
-      tocken, author: anonymous, created: 1766071303198, flowName: demo, flowDesc: ''}
+  7ad9e3c3-f169-46c2-8955-6253f8637c0e: {ver: 7, file: demo.snapshot, comments: bob,
+    author: anonymous, created: 1766071601274, flowName: demo, flowDesc: ''}
 layoutVer: 1
 bucketId: 90e9a44f-a507-41a9-a433-472dcd03e678
