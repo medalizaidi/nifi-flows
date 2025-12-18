@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  trigger-circleci:
-    name: Trigger CircleCI Pipeline
+  trigger-deployment:
+    name: Trigger Deployment Pipeline
     runs-on: ubuntu-latest
     
     steps:
@@ -17,6 +17,7 @@ jobs:
       - name: Get latest commit info
         id: commit_info
         run: |
+          # Use proper multi-line string handling for GitHub Actions
           {
             echo "message<<EOF"
             git log -1 --pretty=%B | head -1
@@ -26,42 +27,16 @@ jobs:
           echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
           echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
       
-      - name: Display trigger info
-        run: |
-          echo "🔔 Flow Update Detected"
-          echo "Commit: ${{ steps.commit_info.outputs.sha }}"
-          echo "Message: ${{ steps.commit_info.outputs.message }}"
-          echo "Author: ${{ steps.commit_info.outputs.author }}"
-      
-      - name: Trigger CircleCI deployment
-        run: |
-          echo "Triggering CircleCI pipeline..."
-          
-          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            -H "Circle-Token: ${{ secrets.CIRCLECI_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            https://circleci.com/api/v2/project/github/medalizaidi/nifi/pipeline \
-            -d '{
-              "branch": "main",
-              "parameters": {
-                "triggered_by": "flow_update",
-                "flow_commit": "${{ steps.commit_info.outputs.sha }}",
-                "flow_message": "${{ steps.commit_info.outputs.message }}",
-                "flow_author": "${{ steps.commit_info.outputs.author }}"
-              }
-            }')
-          
-          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          
-          echo "HTTP Status: $HTTP_CODE"
-          echo "Response: $BODY"
-          
-          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
-            echo "✅ CircleCI pipeline triggered successfully"
-            echo "View at: https://app.circleci.com/pipelines/github/medalizaidi/nifi"
-          else
-            echo "❌ Failed to trigger CircleCI pipeline"
-            echo "Check your CIRCLECI_TOKEN secret"
-            exit 1
-          fi
+      - name: Trigger deployment in nifi repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.NIFI_REPO_PAT }}
+          repository: medalizaidi/nifi
+          event-type: flow-updated
+          client-payload: |
+            {
+              "flow_commit": "${{ steps.commit_info.outputs.sha }}",
+              "flow_message": "${{ steps.commit_info.outputs.message }}",
+              "flow_author": "${{ steps.commit_info.outputs.author }}",
+              "ref": "${{ github.ref }}"
+            }
