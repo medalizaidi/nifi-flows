@@ -33,14 +33,17 @@ jobs:
           echo "Message: ${{ steps.commit_info.outputs.message }}"
           echo "Author: ${{ steps.commit_info.outputs.author }}"
       
-      - name: Trigger CircleCI deployment with parameters
+      - name: Trigger CircleCI deployment
         run: |
           echo "Triggering CircleCI pipeline..."
+          
+          # Use the full project slug
+          PROJECT_SLUG="circleci/NvYUyvaFTwZRZ7JJk3ccvX/LXt2U6FPPvWG8CTRUkbzpo"
           
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
             -H "Circle-Token: ${{ secrets.CIRCLECI_TOKEN }}" \
             -H "Content-Type: application/json" \
-            https://circleci.com/api/v2/project/github/medalizaidi/nifi/pipeline \
+            https://circleci.com/api/v2/project/${PROJECT_SLUG}/pipeline \
             -d '{
               "branch": "main",
               "parameters": {
@@ -55,13 +58,15 @@ jobs:
           BODY=$(echo "$RESPONSE" | sed '$d')
           
           echo "HTTP Status: $HTTP_CODE"
+          echo "Response Body: $BODY"
           
           if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
-            echo "✅ CircleCI pipeline triggered successfully"
-            echo "Pipeline: $(echo "$BODY" | grep -o '"number":[0-9]*' | cut -d: -f2)"
-            echo "View at: https://app.circleci.com/pipelines/github/medalizaidi/nifi"
+            echo "✅ CircleCI pipeline triggered successfully!"
+            PIPELINE_NUM=$(echo "$BODY" | grep -o '"number":[0-9]*' | cut -d: -f2)
+            echo "Pipeline Number: $PIPELINE_NUM"
+            echo "View at: https://app.circleci.com/pipelines/circleci/NvYUyvaFTwZRZ7JJk3ccvX/LXt2U6FPPvWG8CTRUkbzpo"
           else
             echo "❌ Failed to trigger CircleCI pipeline"
-            echo "Response: $BODY"
+            echo "Status Code: $HTTP_CODE"
             exit 1
           fi
