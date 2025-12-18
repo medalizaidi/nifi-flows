@@ -32,59 +32,6 @@
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
-            "artifact" : "nifi-stateful-analysis-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.25.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
-          "identifier" : "3d1ebab8-a4b0-3255-9955-dda85360d6eb",
-          "instanceIdentifier" : "321c1601-019b-1000-c41c-8c4b96c76c3f",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "AttributeRollingWindow",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 390.0,
-            "y" : 127.0
-          },
-          "properties" : { },
-          "propertyDescriptors" : {
-            "Value to track" : {
-              "displayName" : "Value to track",
-              "identifiesControllerService" : false,
-              "name" : "Value to track",
-              "sensitive" : false
-            },
-            "Time window" : {
-              "displayName" : "Time window",
-              "identifiesControllerService" : false,
-              "name" : "Time window",
-              "sensitive" : false
-            },
-            "Sub-window length" : {
-              "displayName" : "Sub-window length",
-              "identifiesControllerService" : false,
-              "name" : "Sub-window length",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
             "artifact" : "nifi-standard-nar",
             "group" : "org.apache.nifi",
             "version" : "1.25.0"
@@ -168,6 +115,218 @@
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-stateful-analysis-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
+          "identifier" : "29549987-8ced-323b-ba1e-a6ba27fccba4",
+          "instanceIdentifier" : "323c71c1-019b-1000-b448-71ab03c1efbe",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributeRollingWindow",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 259.0,
+            "y" : 608.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "Value to track" : {
+              "displayName" : "Value to track",
+              "identifiesControllerService" : false,
+              "name" : "Value to track",
+              "sensitive" : false
+            },
+            "Time window" : {
+              "displayName" : "Time window",
+              "identifiesControllerService" : false,
+              "name" : "Time window",
+              "sensitive" : false
+            },
+            "Sub-window length" : {
+              "displayName" : "Sub-window length",
+              "identifiesControllerService" : false,
+              "name" : "Sub-window length",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-stateful-analysis-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
+          "identifier" : "38866201-a4ed-33c4-8513-fdad5698bc39",
+          "instanceIdentifier" : "31e005d3-019b-1000-3522-018329c3408a",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributeRollingWindow",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 753.0,
+            "y" : 276.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "Value to track" : {
+              "displayName" : "Value to track",
+              "identifiesControllerService" : false,
+              "name" : "Value to track",
+              "sensitive" : false
+            },
+            "Time window" : {
+              "displayName" : "Time window",
+              "identifiesControllerService" : false,
+              "name" : "Time window",
+              "sensitive" : false
+            },
+            "Sub-window length" : {
+              "displayName" : "Sub-window length",
+              "identifiesControllerService" : false,
+              "name" : "Sub-window length",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-stateful-analysis-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
+          "identifier" : "899a2818-d38b-3691-9121-2b6dc1153ae3",
+          "instanceIdentifier" : "32061bdc-019b-1000-0afc-96edecf6201a",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributeRollingWindow",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 354.0,
+            "y" : 160.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "Value to track" : {
+              "displayName" : "Value to track",
+              "identifiesControllerService" : false,
+              "name" : "Value to track",
+              "sensitive" : false
+            },
+            "Time window" : {
+              "displayName" : "Time window",
+              "identifiesControllerService" : false,
+              "name" : "Time window",
+              "sensitive" : false
+            },
+            "Sub-window length" : {
+              "displayName" : "Sub-window length",
+              "identifiesControllerService" : false,
+              "name" : "Sub-window length",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-stateful-analysis-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.25.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
+          "identifier" : "3d1ebab8-a4b0-3255-9955-dda85360d6eb",
+          "instanceIdentifier" : "321c1601-019b-1000-c41c-8c4b96c76c3f",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "AttributeRollingWindow",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 390.0,
+            "y" : 127.0
+          },
+          "properties" : { },
+          "propertyDescriptors" : {
+            "Value to track" : {
+              "displayName" : "Value to track",
+              "identifiesControllerService" : false,
+              "name" : "Value to track",
+              "sensitive" : false
+            },
+            "Time window" : {
+              "displayName" : "Time window",
+              "identifiesControllerService" : false,
+              "name" : "Time window",
+              "sensitive" : false
+            },
+            "Sub-window length" : {
+              "displayName" : "Sub-window length",
+              "identifiesControllerService" : false,
+              "name" : "Sub-window length",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-cybersecurity-nar",
             "group" : "org.apache.nifi",
             "version" : "1.25.0"
@@ -234,59 +393,6 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.cybersecurity.CompareFuzzyHash",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-stateful-analysis-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.25.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
-          "identifier" : "29549987-8ced-323b-ba1e-a6ba27fccba4",
-          "instanceIdentifier" : "323c71c1-019b-1000-b448-71ab03c1efbe",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "AttributeRollingWindow",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 259.0,
-            "y" : 608.0
-          },
-          "properties" : { },
-          "propertyDescriptors" : {
-            "Value to track" : {
-              "displayName" : "Value to track",
-              "identifiesControllerService" : false,
-              "name" : "Value to track",
-              "sensitive" : false
-            },
-            "Time window" : {
-              "displayName" : "Time window",
-              "identifiesControllerService" : false,
-              "name" : "Time window",
-              "sensitive" : false
-            },
-            "Sub-window length" : {
-              "displayName" : "Sub-window length",
-              "identifiesControllerService" : false,
-              "name" : "Sub-window length",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ ],
@@ -579,14 +685,14 @@
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
-          "identifier" : "38866201-a4ed-33c4-8513-fdad5698bc39",
-          "instanceIdentifier" : "31e005d3-019b-1000-3522-018329c3408a",
+          "identifier" : "b8f8e844-5fda-305a-b24b-ad3798eff310",
+          "instanceIdentifier" : "32a683aa-019b-1000-e3a6-6bff12a977eb",
           "maxBackoffPeriod" : "10 mins",
           "name" : "AttributeRollingWindow",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 753.0,
-            "y" : 276.0
+            "x" : 304.0,
+            "y" : 255.0
           },
           "properties" : { },
           "propertyDescriptors" : {
@@ -693,59 +799,6 @@
           "position" : {
             "x" : 338.0,
             "y" : 12.0
-          },
-          "properties" : { },
-          "propertyDescriptors" : {
-            "Value to track" : {
-              "displayName" : "Value to track",
-              "identifiesControllerService" : false,
-              "name" : "Value to track",
-              "sensitive" : false
-            },
-            "Time window" : {
-              "displayName" : "Time window",
-              "identifiesControllerService" : false,
-              "name" : "Time window",
-              "sensitive" : false
-            },
-            "Sub-window length" : {
-              "displayName" : "Sub-window length",
-              "identifiesControllerService" : false,
-              "name" : "Sub-window length",
-              "sensitive" : false
-            }
-          },
-          "retriedRelationships" : [ ],
-          "retryCount" : 10,
-          "runDurationMillis" : 0,
-          "scheduledState" : "ENABLED",
-          "schedulingPeriod" : "0 sec",
-          "schedulingStrategy" : "TIMER_DRIVEN",
-          "style" : { },
-          "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
-          "yieldDuration" : "1 sec"
-        }, {
-          "autoTerminatedRelationships" : [ ],
-          "backoffMechanism" : "PENALIZE_FLOWFILE",
-          "bulletinLevel" : "WARN",
-          "bundle" : {
-            "artifact" : "nifi-stateful-analysis-nar",
-            "group" : "org.apache.nifi",
-            "version" : "1.25.0"
-          },
-          "comments" : "",
-          "componentType" : "PROCESSOR",
-          "concurrentlySchedulableTaskCount" : 1,
-          "executionNode" : "ALL",
-          "groupIdentifier" : "d5e4c25e-1a4d-337f-8d85-dce72aa6e164",
-          "identifier" : "899a2818-d38b-3691-9121-2b6dc1153ae3",
-          "instanceIdentifier" : "32061bdc-019b-1000-0afc-96edecf6201a",
-          "maxBackoffPeriod" : "10 mins",
-          "name" : "AttributeRollingWindow",
-          "penaltyDuration" : "30 sec",
-          "position" : {
-            "x" : 354.0,
-            "y" : 160.0
           },
           "properties" : { },
           "propertyDescriptors" : {
