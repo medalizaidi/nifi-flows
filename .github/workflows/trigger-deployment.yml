@@ -79,10 +79,3 @@ jobs:
           # Push to trigger CircleCI
           git push origin main
           
-          echo ""
-          echo "✅ Triggered CircleCI deployment with commit:"
-          echo "   Message: ${{ steps.commit_details.outputs.message }}"
-          echo "   Author: ${{ steps.commit_details.outputs.author }}"
-          echo ""
-          echo "View pipeline at:"
-          echo "https://app.circleci.com/pipelines/circleci/NvYUyvaFTwZRZ7JJk3ccvX/LXt2U6FPPvWG8CTRUkbzpo"
