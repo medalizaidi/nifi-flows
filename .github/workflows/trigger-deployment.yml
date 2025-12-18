@@ -1,1 +1,36 @@
-# Paste content from nifi-flows-trigger-workflow.yml
+name: Trigger NiFi Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-deployment:
+    name: Trigger Deployment Pipeline
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout flows
+        uses: actions/checkout@v4
+      
+      - name: Get latest commit info
+        id: commit_info
+        run: |
+          echo "message=$(git log -1 --pretty=%B)" >> $GITHUB_OUTPUT
+          echo "author=$(git log -1 --pretty=%an)" >> $GITHUB_OUTPUT
+          echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+      
+      - name: Trigger deployment in nifi repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.NIFI_REPO_PAT }}
+          repository: medalizaidi/nifi
+          event-type: flow-updated
+          client-payload: |
+            {
+              "flow_commit": "${{ steps.commit_info.outputs.sha }}",
+              "flow_message": "${{ steps.commit_info.outputs.message }}",
+              "flow_author": "${{ steps.commit_info.outputs.author }}",
+              "ref": "${{ github.ref }}"
+            }
