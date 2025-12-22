@@ -1,5 +1,5 @@
 flows:
-  28d58fc9-187a-46e6-9a79-eb238b415ef2: {ver: 7, file: demo.snapshot, comments: v,
-    author: anonymous, created: 1766356339504, flowName: demo, flowDesc: ''}
+  28d58fc9-187a-46e6-9a79-eb238b415ef2: {ver: 8, file: demo.snapshot, comments: test
+      flow from dev, author: anonymous, created: 1766388471099, flowName: demo, flowDesc: ''}
 layoutVer: 1
 bucketId: 9bd71412-4aa6-499a-878f-2cd2510679e9
